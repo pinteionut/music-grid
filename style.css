@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+}
+
+#page-container {
+  width: 1600px;
+  height: 800px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#grid-container {
+  width: 1032px;
+  height: 800px;
+  float: left;
+  opacity: 0.9;
+}
+
+#options-container {
+  width: 550px;
+  height: 800px;
+  background: aliceblue;
+  float: right;
+  opacity: 0.9;
+}
+
+.grid-row {
+  height: 100px;
+}
+
+.grid-cell {
+  width: 80px;
+  height: 80px;
+  margin: 3px;
+  background: lightgrey;
+  float: left;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.grid-cell-mouse-over {
+  background: gray;
+}
+
+.grid-cell-active {
+  background: aquamarine;
+}
+
+.grid-row.is-playing > .grid-cell {
+  animation-name: bigresizecell;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.grid-row.is-playing > .grid-cell-active {
+  background: pink;
+}
+
+.grid-row.has-played > .grid-cell {
+  animation-name: smallresizecell;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes colorcell {
+  from { background: gray; }
+  to   { background: aquamarine; }
+}
+
+@keyframes bigresizecell {
+  from { border-radius: 15px; }
+  to   { border-radius: 50px; }
+}
+
+@keyframes smallresizecell {
+  from { border-radius: 50px; }
+  to   { border-radius: 15px; }
+}
+
+.option-button {
+  text-align: center;
+  background: white;
+  width: 100px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 11px;
+  margin: auto;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.option-button:hover {
+  background: black;
+  color: white;
+}
+
+#scale-select-container {
+  width: 200px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.input-video {
+  display: none;
+}
+
+.output-canvas {
+  background: darkslategray;
+  position: absolute;
+}

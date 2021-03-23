@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Grid</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.14/Tone.js" integrity="sha512-0R3O2W4t+1h8Jd3LumXXJrpHuY76WDdjE9he0D7Ra6J95lnvbdmZe+CTw5Bfe2p4CrYeC/dpgtJ33ztGUXKH4Q==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="module"></script>
+  </head>
+  <body>
+    <div id="page-container">
+      <video class="input-video"></video>
+      <canvas class="output-canvas" width="1600px" height="800px"></canvas>
+      <div id="grid-container">
+        <div id="grid">
+        </div>
+      </div>
+      <div id="options-container">
+        <div id="toggle-play-btn" class="option-button">
+          Play
+        </div>
+        <div id="stop-btn" class="option-button">
+          Stop
+        </div>
+        <div id="reset-btn" class="option-button">
+          Reset
+        </div>
+        <div id="scale-select-container">
+          <label for="scales">Scale:</label>
+          <select name="scales" id="scales">
+            <option value="classic">classic</option>
+            <option value="pentatonic">pentatonic</option>
+            <option value="chromatic">chromatic</option>
+            <option value="major">major</option>
+            <option value="harmonic_minor">harmonic_minor</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
